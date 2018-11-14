@@ -1,0 +1,449 @@
+
+@media screen {
+	*
+	{
+		font-family: Tahoma, Geneva, sans-serif;
+	}
+
+	body
+	{
+		background-image: url("../img/background.jpg");
+		background-position: center;
+		background-repeat: repeat-y;
+		background-attachment: fixed;
+		margin: 0px;
+	}
+
+	section#page
+	{
+		width: 900px;
+		margin: auto;
+		position: center;
+	}
+
+	header#banniere
+	{
+		background-image: url("../img/banniere.jpg");
+		height: 211px;
+	}
+
+	h1
+	{
+		font-size: 300%;
+		margin: 0px;
+		color: white;
+		text-align: center;
+		line-height: 211px;
+	}
+
+	small
+	{
+		font-size: 10px;
+	}
+
+	#menu
+	{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	#menu, #menu ul 
+	{
+	 	margin: 0;
+	 	padding: 0;
+	 	list-style: none;
+	}
+
+	#menu ul 
+	{
+		left: -1000em;
+		position: absolute;
+	}
+
+	#menu li
+	{
+		display: inline-block;
+		position: relative;
+		margin-left: 1px;
+	}
+
+	#menu a
+	{
+		padding: 4px;
+		color: black;
+		text-decoration: none;
+		text-align: center;
+		margin-bottom: 3px;
+		background-color: #FECC00;
+		display: block;
+		height: 30px;
+		line-height: 30px;
+		width: 167px;
+	}
+
+	#menu li a:hover
+	{
+		color: white;
+		background-color: rgb(0, 0, 0);
+	}
+
+	#menu li:hover > ul
+	{
+		left: 0;
+	}
+
+	#menu a.active
+	{
+		background-color: #333;
+		color: white;
+	}
+
+	section#real
+	{
+		margin-bottom: 50px;
+	}
+
+	section#interstellar
+	{
+		float: left;
+		width: 75%;
+		margin-bottom: 50px;
+	}
+
+	#sidebar
+	{
+		float: right;
+		width: 23%;
+		margin-top: 1em;
+		background-color: black;
+		color: white;
+	}
+
+	#sidebar a
+	{
+		color: white;
+	}
+
+	article
+	{
+		background-color: white;
+		margin-top: 1em;
+		padding: 1em;
+		text-align: justify;
+	}
+
+	article h2
+	{
+		font-size: 160%;
+	}
+
+	article header
+	{
+		background-color: #FECC00;
+		padding: 1em;
+		color: black;
+	}
+
+	.content
+	{
+		margin-top: 1em;
+	}
+
+	article footer
+	{
+		padding: 1em;
+		background-color: #333;
+		color: white;
+	}
+
+	article img#interstellar_affiche
+	{
+		float: left;
+		margin-left: 1em;
+		margin-right: 1em;
+		margin-bottom: 1em;
+		height: 200px;
+	}
+
+	footer
+	{
+		color: white;
+		font-size: 0.8em;
+		background-color: black;
+		text-align: center;
+		margin-top: 30px;
+		padding: 20px;
+		clear: both;
+	}
+
+	img.actors
+	{
+		width: 60%;
+		height: 60%;
+	}
+
+	table.actors tr td
+	{
+		width: 115px;
+		text-align: center;
+	}
+
+	img#note
+	{
+		width: 35%;
+		height: 35%;
+		margin-right: 3em;
+		margin-left: 3em;
+		margin-bottom: 1em;
+		margin-top: 1em;
+		padding: 1em;
+		background-color: white;
+		border: 2px solid #FECC00;
+		font-style: italic;
+		font-size: 0.8em;
+	}
+
+	/*carousel*/
+
+	.wrapper
+	{
+		width: 800px;
+		max-width: 100%;
+		overflow: hidden;
+		margin: auto;
+	}
+
+	.carousel
+	{
+		position: relative;
+		width: 90%;
+		height: 0;
+		padding-top: 56.25%;
+		background: #ddd;
+		margin: auto;
+	}
+
+	/* Images */
+
+	.carousel-img
+	{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		max-width: 100%;
+		-webkit-transition: opacity ease-out 0.5s;
+		transition: opacity ease-out 0.5s;
+	}
+
+	.carousel-img-displayed
+	{
+		display: block;
+		opacity: 1;
+		z-index: 2;
+	}
+
+	.carousel-img-hidden
+	{
+		display: block;
+		opacity: 0;
+		z-index: 1;
+	}
+
+	.carousel-img-noDisplay
+	{
+		display: none;
+	}
+
+	/* Flèches de défilement */
+
+	.carousel-arrow
+	{
+		z-index: 3;
+		display: block;
+		position: absolute;
+		width: 36px;
+		height: 36px;
+		top: 50%;
+		margin-top: -18px;
+		border-radius: 50%;
+		border: 0;
+		background-color: #fff;
+		background-image: url("http://res.cloudinary.com/dnqehhgmu/image/upload/v1509720334/blue-arrow_jk1ydw.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 16px 16px;
+		cursor: pointer;
+		-webkit-transition: background-size 0.15s ease-out;
+		transition: background-size 0.15s ease-out;
+	}
+
+	.carousel-arrow:hover,
+	.carousel-arrow:focus
+	{
+		background-size: 22px 22px;
+	}
+
+	.carousel-arrow-next
+	{
+		right: 20px;
+	}
+
+	.carousel-arrow-prev
+	{
+		left: 20px;
+		-webkit-transform: rotateZ(180deg);
+		-ms-transform: rotate(180deg);
+		transform: rotateZ(180deg);
+	}
+
+
+	/*page director*/
+
+	#filmographie
+	{
+		border-collapse: collapse;
+		width: 100%;
+		clear: left;
+	}
+
+	#filmographie td, #filmographie th
+	{
+	    border: 1px solid #ddd;
+	    padding: 8px;
+	}
+
+	#filmographie tr:nth-child(even)
+	{
+		background-color: #f2f2f2;
+	}
+
+	#filmographie tr:hover
+	{
+		background-color: #ddd;
+	}
+
+	#filmographie td.x
+	{
+		text-align: center;
+	}
+
+	#filmographie th
+	{
+		text-align: center;
+	    padding-top: 12px;
+	    padding-bottom: 12px;
+	    background-color: #333;
+	    color: white;
+	}
+
+	img.affiches_films {
+		height: 100px;
+		margin: 15px;
+		cursor: pointer;
+	}
+
+	table#table_affiches {
+		padding-left: 22px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	section#page
+	{
+		width: 700px;
+		margin: auto;
+		position: center;
+	}
+
+	header#banniere
+	{
+		background-image: url("../img/banniere.jpg");
+		background-size: 100% 160px;
+		background-repeat: no-repeat;
+	}
+
+	h1
+	{
+		line-height: 160px;
+	}
+
+	nav
+	{
+		text-align: center;
+	}
+
+	#menu a
+	{
+		width: 100px;
+	}
+
+	section#interstellar
+	{
+		width: 100%;
+	}
+
+	#sidebar
+	{
+		float: right;
+		width: 100%;
+		margin-top: 1em;
+		background-color: white;
+		color: black;
+		text-align: center;
+	}
+
+	#sidebar a
+	{
+		color: black;
+	}
+
+	img#note
+	{
+		width: 40%;
+		height: 40%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	section#page
+	{
+		width: 400px;
+		margin: auto;
+		position: center;
+	}
+
+	header#banniere
+	{
+		background-image: url("../img/banniere.jpg");
+		height: 50px;
+	}
+
+	h1
+	{
+		font-size: 1em;
+		line-height: 50px;
+	}
+
+	#menu a
+	{
+		width: 100%;
+		margin-left: 2px;
+		margin-right: 2px;
+	}
+
+	img#note
+	{
+		width: 70%;
+		height: 70%;
+	}
+
+	#filmographie
+	{
+		font-size: 11px;
+	}
+
+}
+
